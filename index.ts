@@ -1,4 +1,4 @@
-
+#! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
 import chalkAnimation from "chalk-animation";
@@ -14,12 +14,13 @@ async function welcome() {
   let neon = chalkAnimation.neon("Let's start the calculation");
   await sleep();
   neon.stop();
-  console.log(`     _____________________
+  const text = `
+     _____________________
     |  _________________  |
     | | AJMAL       0.  | |
     | |_________________| |
     |  ___ ___ ___   ___  |
-    | | 7 | 8 | 9 | | + | |
+    | | 7 {brightYellow}| 8 | {brightYellow}| 9 | | + | |
     | |___|___|___| |___| |
     | | 4 | 5 | 6 | | - | |
     | |___|___|___| |___| |
@@ -27,7 +28,12 @@ async function welcome() {
     | |___|___|___| |___| |
     | | . | 0 | = | | / | |
     | |___|___|___| |___| |
-    |_____________________|`);
+    |_____________________|
+`;
+
+console.log(
+    chalk.blue(text.replace("{brightYellow}", chalk.bgYellow))
+);
 }
 
 await welcome();

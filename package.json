@@ -1,9 +1,12 @@
 {
   "name": "ajmal_calcultor",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "commond line calcultor in TypeScript",
   "main": "index.js",
   "type": "module",
+  "bin": {
+    "ajmal_calcultor": "bin/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
