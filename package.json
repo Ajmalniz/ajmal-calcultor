@@ -1,6 +1,6 @@
 {
   "name": "ajmal_calcultor",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "commond line calcultor in TypeScript",
   "main": "index.js",
   "type": "module",
